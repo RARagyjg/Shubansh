@@ -7,7 +7,7 @@ keep_alive()
 
 # 🔐 Login with Session ID (replace this)
 cl = Client()
-cl.login_by_sessionid("75309383775%3AM6wqShlZVn9nNX%3A7%3AAYcxvi60kW_ru5sYvx7CnenVtOUaE2zYbhhAI03jhg")
+cl.login_by_sessionid("75724784400%3AKIIsvShx0y77vt%3A24%3AAYd1fMnI4gN2uFD5ZhokBCYeLyVwLyteNntsajsV_Q")
 
 # 🤖 Bot Info
 me_id = cl.user_id
