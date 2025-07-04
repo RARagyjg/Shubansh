@@ -6,7 +6,7 @@ from keep_alive import keep_alive
 keep_alive()
 
 cl = Client()
-cl.login_by_sessionid("75724784400%3AqUY6SK6h9qKLPT%3A8%3AAYcsh91FCzPoZvcRHwBAWW9heMpsxHh5n6B_NicyFg")  # 🔐 Apna session ID daalo
+cl.login_by_sessionid("75724784400%3AagcAvbUp2x5QIX%3A26%3AAYfz-oaKg2EvizF1XaFfgn7s3Li9EC2mNIKwB5wiKw")  # 🔐 Apna session ID daalo
 
 me_id = cl.user_id
 my_username = cl.username
@@ -79,15 +79,15 @@ def auto_reply():
                     cl.direct_answer(thread.id, reply)
                     print(f"✔️ Replied to @{username}: {reply}")
                     last_msg_id_by_user[user_id] = latest_msg.id
-                    time.sleep(random.randint(11, 22))
+                    time.sleep(random.randint(0, 10))
                 except Exception as e:
                     print(f"⚠️ Failed to reply in thread {thread.id}: {e}")
 
-            time.sleep(random.randint(12, 23))
+            time.sleep(random.randint(0, 10))
 
         except Exception as err:
             print(f"🚨 Main loop error: {err}")
-            time.sleep(random.randint(10, 20))
+            time.sleep(random.randint(0, 10))
 
 # 🚀 Start bot
 auto_reply()
