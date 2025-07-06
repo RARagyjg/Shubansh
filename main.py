@@ -1,93 +1,45 @@
 from instagrapi import Client
 import time
 import random
-from keep_alive import keep_alive
 
-keep_alive()
-
+# Login with your session ID
 cl = Client()
-cl.login_by_sessionid("75724784400%3AagcAvbUp2x5QIX%3A26%3AAYfz-oaKg2EvizF1XaFfgn7s3Li9EC2mNIKwB5wiKw")  # 🔐 Apna session ID daalo
+cl.login_by_sessionid("75899522429%3AKKhY3DfHuLgqp7%3A8%3AAYdVPKkEXV9h4j8392QoktVNjM-ghHZweTROm_1GLg")  # 👈 Replace with your real session ID
 
-me_id = cl.user_id
-my_username = cl.username
-print(f"🤖 Logged in as @{my_username} (ID: {me_id})")
-
-# ✅ Message reply templates (edit if you want)
-reply_templates_master = [
-    """𝐍𝐈𝐂𝐊 𝐊𝐈 𝐌𝐔𝐌𝐌𝐘 𝐊𝐈 𝐁𝐇𝐎𝐒𝐃𝐈 𝐁𝐀𝐇𝐔𝐓 𝐁𝐀𝐃𝐁𝐔 𝐌𝐀𝐑𝐓𝐈 𝐇__________________________________________________/
-𝐍𝐈𝐂𝐊 𝐊𝐈 𝐊𝐔𝐖𝐀𝐑𝐈 𝐁𝐇𝐄𝐍 𝐊𝐀 𝐀𝐒𝐒 𝐇𝐎𝐋𝐄 𝐁𝐀𝐇𝐔𝐓 𝐓𝐈𝐆𝐇𝐓 𝐇_________________________________________________/
-𝐍𝐈𝐂𝐊 𝐊𝐈 𝐌𝐔𝐌𝐌𝐘 𝐊𝐈 𝐁𝐇𝐎𝐒𝐃𝐈 𝐁𝐀𝐇𝐔𝐓 𝐁𝐀𝐃𝐁𝐔 𝐌𝐀𝐑𝐓𝐈 𝐇__________________________________________________/
-𝐍𝐈𝐂𝐊 𝐊𝐈 𝐊𝐔𝐖𝐀𝐑𝐈 𝐁𝐇𝐄𝐍 𝐊𝐀 𝐀𝐒𝐒 𝐇𝐎𝐋𝐄 𝐁𝐀𝐇𝐔𝐓 𝐓𝐈𝐆𝐇𝐓 𝐇_________________________________________________/
-𝐍𝐈𝐂𝐊 𝐊𝐈 𝐌𝐔𝐌𝐌𝐘 𝐊𝐈 𝐁𝐇𝐎𝐒𝐃𝐈 𝐁𝐀𝐇𝐔𝐓 𝐁𝐀𝐃𝐁𝐔 𝐌𝐀𝐑𝐓𝐈 𝐇__________________________________________________/
-𝐍𝐈𝐂𝐊 𝐊𝐈 𝐊𝐔𝐖𝐀𝐑𝐈 𝐁𝐇𝐄𝐍 𝐊𝐀 𝐀𝐒𝐒 𝐇𝐎𝐋𝐄 𝐁𝐀𝐇𝐔𝐓 𝐓𝐈𝐆𝐇𝐓 𝐇_________________________________________________/
-𝐍𝐈𝐂𝐊 𝐊𝐈 𝐌𝐔𝐌𝐌𝐘 𝐊𝐈 𝐁𝐇𝐎𝐒𝐃𝐈 𝐁𝐀𝐇𝐔𝐓 𝐁𝐀𝐃𝐁𝐔 𝐌𝐀𝐑𝐓𝐈 𝐇__________________________________________________/""",
-"""𝗡𝗜𝗖𝗞 𝗧𝗘𝗥𝗜 𝟭𝟱 𝗦𝗔𝗔𝗟 𝗞𝗜 𝗕𝗛𝗘𝗡 𝗞𝗢 𝗥𝗢𝗭 𝗠𝗘 𝗢𝗬𝗢 𝗠𝗘 𝗟𝗘𝗝𝗔𝗞𝗔𝗥 𝟰 𝗚𝗛𝗔𝗡𝗧𝗘 𝗖𝗛#𝗢𝗗𝗧𝗔 𝗛𝗨 ____________________________________________________/
-𝗡𝗜𝗖𝗞 𝗞𝗜 𝗕𝗛𝗘𝗡 𝗢𝗬𝗢 𝗠𝗘 𝗥𝗢𝗭 𝗠𝗔𝗥𝗪𝗔𝗧𝗜___________________________________________/
-
-𝗡𝗜𝗖𝗞 𝗧𝗘𝗥𝗜 𝟭𝟱 𝗦𝗔𝗔𝗟 𝗞𝗜 𝗕𝗛𝗘𝗡 𝗞𝗢 𝗥𝗢𝗭 𝗠𝗘 𝗢𝗬𝗢 𝗠𝗘 𝗟𝗘𝗝𝗔𝗞𝗔𝗥 𝟰 𝗚𝗛𝗔𝗡𝗧𝗘 𝗖𝗛#𝗢𝗗𝗧𝗔 𝗛𝗨 ____________________________________________________/
-𝗡𝗜𝗖𝗞 𝗞𝗜 𝗕𝗛𝗘𝗡 𝗢𝗬𝗢 𝗠𝗘 𝗥𝗢𝗭 𝗠𝗔𝗥𝗪𝗔𝗧𝗜___________________________________________/
-
-𝗡𝗜𝗖𝗞 𝗧𝗘𝗥𝗜 𝟭𝟱 𝗦𝗔𝗔𝗟 𝗞𝗜 𝗕𝗛𝗘𝗡 𝗞𝗢 𝗥𝗢𝗭 𝗠𝗘 𝗢𝗬𝗢 𝗠𝗘 𝗟𝗘𝗝𝗔𝗞𝗔𝗥 𝟰 𝗚𝗛𝗔𝗡𝗧𝗘 𝗖𝗛#𝗢𝗗𝗧𝗔 𝗛𝗨 ____________________________________________________/
-𝗡𝗜𝗖𝗞 𝗞𝗜 𝗕𝗛𝗘𝗡 𝗢𝗬𝗢 𝗠𝗘 𝗥𝗢𝗭 𝗠𝗔𝗥𝗪𝗔𝗧𝗜___________________________________________/"""
+# Message templates with safe character limits (max ~1000 chars)
+reply_templates = [
+    ("SUBANSH L9 PE_____// " * 20).strip(),
+    ("BHAG MATT____////// " * 20).strip(),
+    ("TERYY GND FADU BACHE ______/// " * 18).strip(),
+    ("CHAL DUMM LAGA HAHAHAAH __///// " * 18).strip()
 ]
 
-# 🧠 Maintain last message replied for each user
-last_msg_id_by_user = {}
+# Get the top group chat ID
+def get_gc_thread_id():
+    threads = cl.direct_threads(amount=5)
+    for thread in threads:
+        if thread.is_group:
+            return thread.id
+    return None
 
-def get_next_reply(username, history):
-    # Filter replies jo already iss user ko bheje gaye ho
-    possible_replies = [r for r in reply_templates_master if r not in history]
-    if not possible_replies:
-        history.clear()
-        possible_replies = reply_templates_master.copy()
-    reply = random.choice(possible_replies)
-    history.add(reply)
-    return reply.replace("{user}", username)
+# Main auto spam function
+def start_gc_autospam():
+    gc_thread_id = get_gc_thread_id()
+    if not gc_thread_id:
+        print("❌ Group chat not found.")
+        return
 
-user_reply_history = {}
+    print(f"🚀 Spamming started in GC: {gc_thread_id}")
 
-def auto_reply():
     while True:
         try:
-            threads = cl.direct_threads(amount=1)
+            msg = random.choice(reply_templates)
+            cl.direct_answer(gc_thread_id, msg)
+            print(f"✔️ Sent spam: {msg[:40]}...")  # Preview
+            time.sleep(random.randint(25, 40))  # Safe delay between messages
+        except Exception as e:
+            print(f"⚠️ Error: {e}")
+            time.sleep(60)
 
-            for thread in threads:
-                if not thread.messages:
-                    continue
-
-                latest_msg = thread.messages[0]
-
-                # Apna msg ignore karo
-                if latest_msg.user_id == me_id:
-                    continue
-
-                user_id = latest_msg.user_id
-                username = cl.user_info(user_id).username
-
-                # Agar same msg pe already reply kar chuke ho, skip karo
-                if last_msg_id_by_user.get(user_id) == latest_msg.id:
-                    continue
-
-                # User history init if not exists
-                if user_id not in user_reply_history:
-                    user_reply_history[user_id] = set()
-
-                # 📨 Generate new random reply
-                reply = get_next_reply(username, user_reply_history[user_id])
-
-                try:
-                    cl.direct_answer(thread.id, reply)
-                    print(f"✔️ Replied to @{username}: {reply}")
-                    last_msg_id_by_user[user_id] = latest_msg.id
-                    time.sleep(random.randint(0, 10))
-                except Exception as e:
-                    print(f"⚠️ Failed to reply in thread {thread.id}: {e}")
-
-            time.sleep(random.randint(0, 10))
-
-        except Exception as err:
-            print(f"🚨 Main loop error: {err}")
-            time.sleep(random.randint(0, 10))
-
-# 🚀 Start bot
-auto_reply()
+# Start the bot
+start_gc_autospam()
