@@ -6,11 +6,11 @@ import itertools
 
 # 🔐 Login with session ID
 cl = Client()
-cl.login_by_sessionid("75899522429%3AKKhY3DfHuLgqp7%3A8%3AAYdVPKkEXV9h4j8392QoktVNjM-ghHZweTROm_1GLg")  # 👈 Replace with your session ID
+cl.login_by_sessionid("78046309958%3AVQL8NaL37snJaQ%3A3%3AAYjGZRBpW6UJNVXYI61UA5j4gz9F4JpUyNG1u74_9g")  # 👈 Replace with your session ID
 
 # 💬 Message templates with safe limits
 reply_templates = [
-    ("SUBANSH L9 PE_____// " * 20).strip(),
+    ("OMA L9 PE_____// " * 20).strip(),
     ("BHAG MATT____////// " * 20).strip(),
     ("TERYY GND FADU BACHE ______/// " * 18).strip(),
     ("CHAL DUMM LAGA HAHAHAAH __///// " * 18).strip()
@@ -42,7 +42,7 @@ def start_gc_autospam():
             unique_msg = f"{msg_base}\n\nID: {uuid.uuid4()}"  # Har msg alag banane ke liye
             cl.direct_answer(gc_thread_id, unique_msg)
             print(f"✔️ Sent: {unique_msg[:40]}...")
-            time.sleep(random.randint(25, 40))  # Safe delay
+            time.sleep(random.randint(,30, 60))  # Safe delay
         except Exception as e:
             print(f"⚠️ Error: {e}")
             time.sleep(60)
