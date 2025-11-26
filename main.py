@@ -22,9 +22,7 @@ cl.login_by_sessionid(SESSION_ID)
 
 # Message list
 reply_templates = [
-   """OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂OMA KI MA RNDI 😂""",
-    """BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋BLACK KI MA RNDI💋 """,
-    """SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗SAM KI MA RNDI💗"""
+   """Oᗰᗩ ᘜᗩᖇᗴᗴᗷ - TERI MA KE SATH SEX AKRAOGA AGAR BHAGA TO BHIKARI _____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ Oᗰᗩ ᘜᗩᖇᗴᗴᗷ - RANDI TERI MAAA MERE LODE PAR"""
 ]
 
 # Infinite message cycle
@@ -41,7 +39,7 @@ def start_gc_autospam():
             print(f"✔️ Sent: {msg}")
 
             # SAFE DELAY (30–60 sec)
-            time.sleep(random.randint(30, 60))
+            time.sleep(random.randint(40, 60))
 
         except Exception as e:
             print(f"⚠️ Error: {e}")
